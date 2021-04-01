@@ -33,7 +33,7 @@ K0 = [x0(beta); xdot0(alpha, v0); y0(beta); ydot0(alpha,v0)]; %x,xdot,y,ydot
 [t,k] = ode45('StateSpace',tspan, K0, options);
 
 figure(1);
-plot(t,k(:,1),t,k(:,3),t,Earth(:,1),t,Earth(:,2),t,Moon(:,1),t,Moon(:,2),'linewidth',2);
+plot(k(:,1),k(:,3),Earth(:,1),Earth(:,2),Moon(:,1),Moon(:,2),'linewidth',2);
 legend('Satellite x','Satellite y','Earth x','Earth y','Moon x','Moon y');
 %%
 %part (b)
